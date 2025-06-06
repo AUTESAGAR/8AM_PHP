@@ -1,0 +1,1 @@
+<?php echo $_COOKIE['pro_name'];  ?>
