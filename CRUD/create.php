@@ -14,6 +14,7 @@
         $run = mysqli_query($conn,$query);
         if($run){
             $result = "User Added Success";
+            header("refresh:1,url=read.php");
         }
         else{
             $result = "Server Error";
