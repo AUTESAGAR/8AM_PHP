@@ -3,10 +3,9 @@
     session_start();
     error_reporting(0);
     $result="";
-    if(isset($_POST['login']) && $_POST['uname'] && $_POST['pwd'])
-    {        
+    if(isset($_POST['login']) && $_POST['uname'] && $_POST['pwd']){
         $uname = $_POST['uname'];
-        $pwd = $_POST['pwd'];        
+        $pwd = $_POST['pwd'];
         $query = "SELECT * FROM `users` WHERE `uname`='$uname'";
         $run = mysqli_query($conn,$query);
         $data = mysqli_fetch_assoc($run);
@@ -31,7 +30,7 @@
 ?>
 
 <center>
-    <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">    
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">    
         <h3>Login Account</h3>        
         <p><input type="text" name="uname"id="uname" placeholder="Enter Your uname"></p>
         <p><input type="password" name="pwd"  id="pwd" placeholder="Enter Your pwd"></p>
