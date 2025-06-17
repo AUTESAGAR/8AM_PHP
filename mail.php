@@ -11,7 +11,6 @@
     $tmp = $_FILES['attachement']['tmp_name'];
     $folder = "uploads/".time()."-".$attachement;
     move_uploaded_file($tmp,$folder);
-
     $mail = new PHPMailer(true);
 
 try {
